@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+	<div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container">
+                <div class="input-group stylish-input-group">
+                    <div class="alert alert-warning">
+                    	<strong>Invalid Input! Please try again.</strong>
+                    </div>
+                   <h1><b>Input in this way:</b></h1><br>
+                    <ul>
+                        <li><h4> For Methane type: methane or ch4 </h4></li>
+                        <li><h4> For Ethyl Alcohol type: type ethanol or c2h6o</h4></li>
+                    </ul><br>
+                    <h5 style="color:red"><b>* For better results use molecular formula.</b></h5><br><br><br>
+
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container-fluid">
+	<div class="row ">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container">
+                <div class="input-group stylish-input-group">
+                   <h1><b>Details of {{compound.name}}:</b></h1><br><br>
+                    <div class="table-responsive">
+                      <table class="table" >
+
+                          <tr >
+                            <td class="info"><b>Name</b></td>
+                            <td class="success">{{compound.name}}</td>
+                        </tr>
+
+                          <tr>
+                            <td class="info"><b>Molecular Formula</b></td>
+                            <td class="success">{{compound.formula}}</td>
+                        </tr>
+
+                          <tr>
+                            <td class="info"><b>Molecular Weight</b></td>
+                            <td class="success">{{compound.mol_wt}}</td>
+                        </tr>
+
+                          <tr>
+                            <td class="info"><b>T<sub>C</sub> (K)</b></td>
+                            <td class="success">{{compound.tc}}</td>
+                        </tr>
+
+                          <tr>
+                            <td class="info"><b>P<sub>C</sub> (MPa)</b></td>
+                            <td class="success">{{compound.pc}}</td>
+                        </tr>
+
+                          <tr>
+                            <td class="info"><b>V<sub>C</sub> (m3/kmol)</b></td>
+                            <td class="success">{{compound.vc}}</td>
+                        </tr>
+
+                          <tr>
+                            <td class="info"><b>Z<sub>C</sub></b></td>
+                            <td class="success">{{compound.zc}}</td>
+                        </tr>
+
+                          <tr>
+                            <td class="info"><b>Acentric Factor</b></td>
+                            <td class="success">{{compound.af}}</td>
+                        </tr>
+
+                      </table><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+{% endblock %}

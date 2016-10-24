@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CC DB</title>
+
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   <link href="{% static 'css/main.css' %}" rel="stylesheet">
+   <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+   <link href="{% static 'css/font-awesome/css/font-awesome.css' %}" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<div class="container">
+    <div class="row">
+            <h1><i class="fa fa-flask"></i> <b><a href="/">CC DB</a></b></h1><br>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+          <div class="col-md-7 col-md-offset-3" >
+                <form class="form-inline" action="{% url 'search' %}" method="GET">
+                    <input type="text" id="search" name="q" class="form-control" placeholder="search" style="width:80%" value="{{ request.GET.q }}">
+                    <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> </button>
+                </form>
+          </div>
+    </div>
+</div>
+
+
+
+
+    {% block body %}
+    {% endblock %}
+
+<footer class="navbar-fixed-bottom" style="padding:10px; background-color:#e0e1e2">
+      <div class="text-center">
+          <b>2016 - Created & Maintained by WT</b>
+      </div>
+</footer>
+
+</body>
+</html>

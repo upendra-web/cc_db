@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+	<div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container">
+                <div class="input-group stylish-input-group">
+                   <h1><b>Results for '{{request.GET.q}}':</b></h1><br>
+                    <ul>
+                        {% for compound in compounds %}
+                        <li><a href="/{{compound.pk}}"><h4> {{ compound.name }} </h4></a></li>
+                        {% endfor %}
+                    </ul><br><br><br>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+{% endblock %}
